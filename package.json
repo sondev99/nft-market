@@ -64,8 +64,8 @@
     "@typechain/ethers-v6": "^0.5.0",
     "@typechain/hardhat": "^6.1.2",
     "@types/mocha": ">=9.1.0",
-    "@types/node": "20.12.4",
-    "@types/react": "18.2.74",
+    "@types/node": "20.12.8",
+    "@types/react": "18.3.1",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "chai": "^4.3.7",
@@ -79,6 +79,6 @@
     "tailwindcss": "^3.3.0",
     "ts-node": ">=8.0.0",
     "typechain": "^8.3.0",
-    "typescript": "5.4.3"
+    "typescript": "5.4.5"
   }
 }
