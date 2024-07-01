@@ -10,11 +10,9 @@ import { UploadIcon, VerifiIcon } from '@/icon';
 import { Button } from '@/components/ui/button';
 import AuthorInfor from '../component/AuthorInfor';
 import AuthorTaps from '../component/AuthorTaps';
-import { AppContext } from '@/context/app-context';
 import AuthorNFTCardBox from '../component/AuthorNFTCardBox';
 
 const authorPage = () => {
-  const { fetchMyNFTsOrListedNFTs, walletAddress } = useContext(AppContext);
   const [listedNfts, setListedNfts] = useState(true);
   const [created, setCreated] = useState(false);
   const [like, setLike] = useState(false);

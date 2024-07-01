@@ -5,8 +5,7 @@ import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 import { HeroSections } from '@/components/Hero';
 import { SubcribeSection } from '@/components/SubcribeSection';
 import { useContext, useEffect, useState } from 'react';
-
-import { AppContext } from '@/context/app-context';
+import { MarketplaceNFTs } from '@/components/MarketplaceNFTs';
 
 // interface ProductReel {
 //   title: string;
@@ -16,16 +15,6 @@ import { AppContext } from '@/context/app-context';
 
 export default function Home() {
   const [nfts, setNfts] = useState([]);
-  const { fetchNFTs } = useContext(AppContext);
-
-  useEffect(() => {
-    //@ts-ignore
-    fetchNFTs().then((item) => {
-      setNfts(item);
-      // setNftsCopy(item);
-    });
-  }, []);
-  console.log(nfts);
 
   return (
     <>
@@ -39,12 +28,13 @@ export default function Home() {
             products={item.products}
           />
         ))} */}
-        <ProductReel
+        {/* <ProductReel
           key="All Nfts"
           title="All Nfts"
           // href={item.href}
           nfts={nfts}
-        />
+        /> */}
+        <MarketplaceNFTs />
         <SubcribeSection />
       </MaxWidthWrapper>
     </>

@@ -104,7 +104,7 @@ contract Auction is IERC721Receiver, Ownable {
         require(_auction.auctioneer != msg.sender, "Can not bid on your own auction");
 
         // Next bidder transfer token to contract
-        SafeERC20.safeTransferFrom(token, msg.sender, address(this), _bid);
+                    SafeERC20.safeTransferFrom(token, msg.sender, address(this), _bid);
 
         // Refund token to previous bidder
         if (_auction.lastBidder != address(0)) {

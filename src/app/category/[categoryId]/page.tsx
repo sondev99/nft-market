@@ -1,6 +1,5 @@
 'use client';
 
-import productApi from '@/apis/productApi';
 import ProductListing from '@/components/NFTCard/NFTCard';
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 import { useSearchParams } from 'next/navigation';
@@ -13,14 +12,6 @@ const CategoryPage = (props: CategoryPageProps) => {
   const [products, setProducts] = useState<ProductResponse[]>();
   const searchParam = useSearchParams();
   const categoryId = searchParam.get('id');
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const productsRes = await productApi.getProductByCategory(categoryId);
-      setProducts(productsRes.data);
-    };
-    fetchData();
-  }, []);
 
   console.log('products', products);
 

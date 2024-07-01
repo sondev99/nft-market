@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import NFTCard from './NFTCard/NFTCard';
+import NFTCard from './Card/NFTCard';
 
 interface ProductReelProps {
   title: string;

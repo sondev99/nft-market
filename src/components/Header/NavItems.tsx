@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Navigation } from './Header';
 import NavItem from './NavItem';
 interface NavbarItemProps {
-  categories: Navigation[] | undefined;
+  categories: Category[];
 }
 
 const NavItems = ({ categories }: NavbarItemProps) => {
